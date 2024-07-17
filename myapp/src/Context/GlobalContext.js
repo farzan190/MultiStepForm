@@ -16,12 +16,16 @@ export const GlobalContext=createContext();
     }
  );
  
+const [duration,setDuration]=useState("");
+const [plan,setPlan] =useState("Arcade");
 
-return <GlobalContext.Provider value={{formData,setFormData}}>{children}</GlobalContext.Provider>
+
+
+return <GlobalContext.Provider value={{formData,setFormData,plan,setPlan,duration,setDuration}}>{children}</GlobalContext.Provider>
 
 }
 
-// svg image and name and price based on month and year 
+
 
  
 
