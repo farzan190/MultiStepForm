@@ -18,10 +18,10 @@ export const GlobalContext=createContext();
  
 const [duration,setDuration]=useState("");
 const [plan,setPlan] =useState("Arcade");
+const [addOns,setAddOns]=useState(["hellee"]);
 
 
-
-return <GlobalContext.Provider value={{formData,setFormData,plan,setPlan,duration,setDuration}}>{children}</GlobalContext.Provider>
+return <GlobalContext.Provider value={{formData,setFormData,plan,setPlan,duration,setDuration,addOns,setAddOns}}>{children}</GlobalContext.Provider>
 
 }
 

@@ -1,10 +1,13 @@
+import AddOns from './AddOns';
 import './App.css';
 import PersonalInfo from "./personalInfo";
 import PlanSelection from './planSelection';
 function App() {
 return (
 
-<PlanSelection/>
+<AddOns/>
+
+
 )
 }
 
