@@ -3,6 +3,7 @@ import {GlobalContext} from "./Context/GlobalContext";
 import { ReactComponent as Arcade } from "./Assets/icon-arcade.svg";
 import {ReactComponent as Advanced} from  "./Assets/icon-advanced.svg"
 import {ReactComponent as Pro} from "./Assets/icon-pro.svg"
+import Slider from "./Slider";
 export const planOptions = [
     {
       Arcade: {
@@ -37,12 +38,10 @@ export const planOptions = [
 
     const handleClick=({event})=>{
         setPlan(event.id);
-
-
-
     }
     
-    return (<>
+    return (
+    <>
            {  
             planOptions.map((item)=>{
             const SvgComponent=svgMapping[Object.keys(item)];
@@ -56,22 +55,28 @@ export const planOptions = [
            <div>
            <h2>{Object.keys(item)}</h2>
            { isMonthly? (<p>${item[Object.keys(item)].monthPrice}/mo</p>):(<><p>${item[Object.keys(item)].yearPrice}/yr</p><span>2 months free</span></>)}
-
-
            </div>
-
-
-
             </div>
-
-
-
             })
-
-
            }
 
+       <div>
+        <span>Monthly</span>
+        <Slider options={["yearly"]} value={duration} setValue={setDuration}/>
+        <span>Yearly</span>
+
+
+       </div>
+
+
+
+
            </>
+
+            
+
+
+
 
     )
           
